@@ -10,9 +10,10 @@ from typing import Dict, Any
 print(f"__name__: {__name__}")  # __name__ = "__main__", or "C:\Users\Shawn\Desktop\python_notes\option_price_predictor/main.py"
 flask_app: Flask = Flask(__name__)  # C:\Users\Shawn\Desktop\python_notes\option_price_predictor/templates/img.png
 
-
+# REST -> Protocol (set of rules that applications follow to send and receive data)
 @flask_app.route("/shawn_route", methods=["GET"])
 def call_option_price() -> Dict[str, Any]:
+    # JSON -> Javascript Object Notation (JSON), actually is a misnomer (string, key value pairs)
     return {
         "AAPL": 100
     }
